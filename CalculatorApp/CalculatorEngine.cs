@@ -17,7 +17,7 @@ namespace CalculatorApp
 
         internal void PushOperation(string token)
         {
-            Console.WriteLine($"Performing operation: {token}");
+            //Console.WriteLine($"Performing operation: {token}");
 
             while (operations.Count > 0 && Precendence(token) <= Precendence(operations.Peek()))
             {
@@ -32,7 +32,7 @@ namespace CalculatorApp
 
         internal void PushNumber(double number)
         {
-            Console.WriteLine($"Pushing number: {number}");
+            //Console.WriteLine($"Pushing number: {number}");
             numbers.Push(number);
         }
 
@@ -47,6 +47,8 @@ namespace CalculatorApp
             }
 
             Result = numbers.Pop();
+
+            
             Console.WriteLine($"Result: {Result}");
         }
 
